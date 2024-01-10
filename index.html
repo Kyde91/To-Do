@@ -3,24 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lemon&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>TO DO</title>
   </head>
   <body>
-    <section class="header">
-      <h1>TO DO</h1>
-      <h3>Plan to finish.</h3>
-    </section>
-    <section class="container">
-      <div>
-        <input type="text" id="task" placeholder="What do you need to do?" />
-        <button class="btn" onclick="createToDo()">Submit</button>
-        <button onclick="window.location.reload()">Clear List</button>
+    <div class="header">
+      <h1 class="title">TO DO</h1>
+      <div id="linebreak"></div>
+      <h1 class="subtitle">Daily Planner</h1>
+
+      <form onsubmit="event.preventDefault();createToDo()">
+        <input
+          type="text"
+          id="task"
+          placeholder="What do you need to do?"
+          required
+        />
+        <button class="btn">Submit</button>
+        <button class="btn" onclick="window.location.reload()">
+          Clear List
+        </button>
+      </form>
+
+      <div class="list-container">
+        <div>
+          <ul id="list"></ul>
+        </div>
       </div>
-      <div>
-        <ul id="list"></ul>
-      </div>
-    </section>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
