@@ -4,23 +4,79 @@
 }
 
 body {
+  height: 100vh;
+  width: 100vw;
   padding: 0;
   margin: 0;
-  background: rgb(68, 112, 112);
+  font-family: "Lemon", serif;
+  background-image: linear-gradient(
+    to top left,
+    rgb(25, 160, 126),
+    rgb(197, 218, 212)
+  );
+  background-repeat: no-repeat;
+  overflow: hidden;
 }
+
+#linebreak {
+  border-bottom: solid 2px black;
+  margin: auto;
+  margin-bottom: 20px;
+  width: 10%;
+  text-align: center;
+}
+
+/* TITLE AND SUBTITLE */
 
 .header {
   margin: auto;
-  padding: 30px;
   width: auto;
   height: 100%;
   text-align: center;
 }
 
-.container {
+.title {
+  margin-top: 40px;
+  padding: 5px;
+  font-size: 5em;
+}
+
+.subtitle {
   margin: auto;
-  width: auto;
-  padding: auto;
+  padding-bottom: 20px;
+}
+
+/* TASKBAR and BUTTONS */
+#task {
+  width: 30%;
+  height: 30px;
+  border-radius: 5px;
+  border-style: none;
+  text-indent: 10px;
+}
+
+.btn {
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  border-style: none;
+}
+
+/* LIST STYLING */
+
+#list {
+  list-style: none;
+  padding: 20px;
+  margin: auto;
   height: 100%;
-  text-align: center;
+  width: 100%;
+}
+
+.list-container {
+  width: 40%;
+  height: 50%;
+  padding: 10px;
+  border: 5px solid rgb(175, 255, 224);
+  margin: auto;
+  margin-top: 20px;
 }
