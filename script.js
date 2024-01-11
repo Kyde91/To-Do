@@ -10,7 +10,7 @@ function createToDo() {
   var remove = document.createElement("button");
 
   remove.classList.add("remove");
-  remove.innerHTML = "Complete";
+  remove.innerHTML = "x";
   remove.addEventListener("click", (event) => {
     event.target.parentElement.remove();
   });

@@ -56,10 +56,56 @@ body {
 }
 
 .btn {
+  position: relative;
+  background-image: linear-gradient(
+    to top left,
+    rgba(21, 228, 100, 0.801),
+    rgb(197, 218, 212, 0.7)
+  );
+  border: none;
+  color: #000000;
   width: 100px;
+  text-align: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
   height: 30px;
+  border: solid black 1px;
   border-radius: 5px;
-  border-style: none;
+  font-family: "Lemon", serif;
+  border-image: linear-gradient(to top right, #b4cfc3, rgb(68, 216, 23)) 1 / 1px;
+}
+
+.btn:after {
+  content: "";
+  background: #d4dad4;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s;
+}
+
+.btn:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s;
+}
+
+.clearList {
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(175, 56, 20, 0.801),
+    rgb(197, 218, 212, 0.7)
+  );
+  border-image: linear-gradient(to top right, #d3a2a2, rgba(175, 56, 20)) 1 /
+    1px;
 }
 
 /* LIST STYLING */
@@ -70,13 +116,22 @@ body {
   margin: auto;
   height: 100%;
   width: 100%;
+  text-align: left;
+  font-size: 18px;
+  color: #d4dad4;
 }
 
 .list-container {
   width: 40%;
   height: 50%;
   padding: 10px;
-  border: 5px solid rgb(175, 255, 224);
+  border: solid black 2px;
   margin: auto;
   margin-top: 20px;
+  background-color: rgb(0, 0, 0, 0.3);
+}
+
+.remove {
+  margin-left: 20px;
+  font-size: 18px;
 }
